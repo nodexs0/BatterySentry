@@ -44,7 +44,12 @@ El script utiliza una máquina de estados para manejar varios estados de la bate
 
   sudo pacman -S brightnessctl
   ```
+- **mpg123**: El script utiliza `mpg123` para reproducir sonidos de notificación. Asegúrate de tenerlo instalado en tu sistema.
+  ```bash
+  sudo apt-get install mpg123
 
+  sudo pacman -S mpg123
+  ```
 ## Instalación
 
 1. Clona el repositorio en tu sistema.
