@@ -6,7 +6,7 @@ Este script en Bash monitorea el estado de la batería de un sistema Linux, envi
 
 El script utiliza una máquina de estados para manejar varios estados de la batería:
 
-![Diagrama de Máquina de Estados](https://github.com/nodexs0/BatterySentry/assets/image.png)
+![Diagrama de Máquina de Estados](https://raw.githubusercontent.com/nodexs0/BatterySentry/main/assets/image.png)
 
 - **1: Batería Crítica**: El sistema se suspenderá cuando la batería alcance un nivel crítico.
 - **2: Batería Muy Baja**: Envía una notificación y reduce el brillo de la pantalla al 5%.
