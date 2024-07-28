@@ -27,11 +27,19 @@ VERY_LOW_FILE="/tmp/battery_very_low"
 CHARGING_FILE="/tmp/battery_charging"
 DISCHARGING_FILE="/tmp/battery_discharging"
 
+# Sonido de notificación
+NOTIFICATION_SOUND="$HOME/.config/bspwm/assets/notification.mp3"
+
 # Función para enviar notificaciones
 send_notification() {
     local message=$1
     local icon=$2
     dunstify "$message" -i "$icon" -u critical -t 5000
+
+    # Reproducir sonido de notificación con mpg123
+    if [ -f "$NOTIFICATION_SOUND" ]; then
+        mpg123 -q "$NOTIFICATION_SOUND" &
+    fi
 }
 
 # Maquina de estados
@@ -233,5 +241,6 @@ while true; do
     # Esperar un tiempo
     sleep $FREQUENCY
 done
+
 
 
